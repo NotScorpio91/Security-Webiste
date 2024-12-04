@@ -1,5 +1,7 @@
+
 <!-- Banner -->
-<section class="section banner relative">
+
+  <section class="section banner relative">
   <div class="container">
     <div class="row items-center">
       <div class="lg:col-6">
@@ -13,28 +15,26 @@
         <a class="btn btn-white mt-8" href="contact.html">Contact Us</a>
       </div>
       <!-- Swiper Container -->
-      <div class="lg:col-6 overflow-hidden rounded-2xl relative">
+      <div class="lg:col-6 overflow-hidden rounded-2xl h-[400px] p-0">
         <div class="swiper-container w-full h-full">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper w-full h-full">
             <!-- Swiper Slides -->
-            <div class="swiper-slide">
+            <div class="swiper-slide w-full h-full slide-animation cursor-pointer">
               <img class="w-full h-full object-cover" src="/images/BannerImage1.jpg" alt="Banner Image 1" />
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide w-full h-full slide-animation cursor-pointer">
               <img class="w-full h-full object-cover" src="/images/BannerImage2.jpg" alt="Banner Image 2" />
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide w-full h-full slide-animation cursor-pointer">
               <img class="w-full h-full object-cover" src="/images/BannerImage3.jpg" alt="Banner Image 3" />
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide w-full h-full slide-animation cursor-pointer">
               <img class="w-full h-full object-cover" src="/images/BannerImage4.jpg" alt="Banner Image 4" />
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide w-full h-full slide-animation cursor-pointer">
               <img class="w-full h-full object-cover" src="/images/BannerImage5.jpg" alt="Banner Image 5" />
             </div>
           </div>
-          <!-- Pagination -->
-          <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
@@ -102,7 +102,7 @@
 <!-- ./end Key features -->
 
 <!-- Services -->
-<section class="section services">
+<!-- <section class="section services">
   <div class="container">
     <div class="tab row gx-5 items-center" data-tab-group="integration-tab">
       <div class="lg:col-7 lg:order-2">
@@ -208,7 +208,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- ./end Services -->
 
 <!-- Reviews -->
@@ -305,15 +305,21 @@
 </section>
 
 
+
 <!-- Include Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
   const swiper = new Swiper('.swiper-container', {
     loop: true, // Enables infinite scrolling
     slidesPerView: 1, // Shows one image at a time
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true, // Makes pagination dots clickable
+    autoplay: {
+      delay: 3000, // Changes slides every 3 seconds
+      disableOnInteraction: false, // Keeps autoplay active after user interaction
+    },
+    effect: 'fade', // Use 'slide', 'cube', 'coverflow', 'flip' for other effects
+    speed: 1000, // Speed of the transition
+    fadeEffect: {
+      crossFade: true, // Enables cross-fade effect
     },
   });
 </script>
